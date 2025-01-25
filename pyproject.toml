@@ -1,0 +1,35 @@
+[project]
+name = "boilerplate-django-be"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=5.1.5",
+    "django-cors-headers>=4.6.0",
+    "djangorestframework==3.15.2",
+    "drf-spectacular[sidecar]==0.28.0",
+    "gunicorn==23.0.0",
+    "mongoengine==0.29.1",
+    "mysqlclient==2.2.7",
+    "whitenoise>=6.8.2",
+]
+
+[dependency-groups]
+dev = [
+    "faker>=35.0.0",
+    "factory-boy>=3.3.1",
+    "coverage==7.6.10",
+    "django-debug-toolbar==4.4.6",
+    "pytest-django==4.9.0",
+    "django-stubs[compatible-mypy]>=5.1.1",
+    "djangorestframework-stubs[compatible-mypy]>=3.15.2",
+]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+exclude = [
+    'django_project',
+]
